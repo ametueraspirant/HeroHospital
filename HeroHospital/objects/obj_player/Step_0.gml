@@ -66,7 +66,45 @@ if(key_menu)menu = !menu;
 
 #region // Movement checks
 
-
+/* this here movement code will need to be changed to fit the slopes.
+//horizontal movement and collision
+if(keyRight and !place_meeting(x + 1, y, colliderParent)){
+	if(xSpeed <= maxRunSpeed){
+		xSpeed += accel;
+	}
+}
+if(keyLeft and !place_meeting(x - 1, y, colliderParent)){
+	if(xSpeed >= -maxRunSpeed){
+		xSpeed -= accel;
+	}
+}
+if(xSpeed != 0){
+	if(abs(xSpeed) < 0.7 and ((!keyLeft and !keyRight) or (keyLeft and keyRight) or keyDuck)){
+		xSpeed = 0;
+	}
+	xSpeed -= sign(xSpeed) * frict;
+}	
+//falling and vertical collision
+if(!place_meeting(x, y + ySpeed, colliderParent)){
+	y += ySpeed;
+	if(ySpeed <= maxFallSpeed){
+		ySpeed += weight;
+	}
+} else {
+	while(!place_meeting(x, y + sign(ySpeed), colliderParent)){
+	y += sign(ySpeed);
+	}
+	ySpeed = 0
+}
+if(!place_meeting( x + xSpeed, y, colliderParent)){
+	x += xSpeed;
+} else {
+	while(!place_meeting(x + sign(xSpeed), y, colliderParent)){
+		x += sign(xSpeed);
+	}
+	xSpeed = 0;
+}
+*/
 #endregion
 
 #region // Collision checks
