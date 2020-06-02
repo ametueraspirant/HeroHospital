@@ -51,12 +51,12 @@ if(t_kick >= 0)t_kick--;
 if(t_block >= 0)t_block--;
 if(t_dash >= 0)t_dash--;
 
-// remedial ledge id code. old variables that will be changed
-//inst = instance_place(x + runDir, y, ledgeCollider);
-//if(inst == noone)inst = instance_place(x + runDir, y + 1, ledgeCollider);
-//if(place_meeting(x + runDir, y + 1, ledgeCollider) and inst != noone){
-//	ledgeTouch = inst;
-//}
+/* remedial ledge id code. old variables that will be changed
+inst = instance_place(x + runDir, y, ledgeCollider);
+if(inst == noone)inst = instance_place(x + runDir, y + 1, ledgeCollider);
+if(place_meeting(x + runDir, y + 1, ledgeCollider) and inst != noone){
+	ledgeTouch = inst;
+}*/
 
 // even more miscellaneous-er checks
 if(keyboard_check(vk_anykey))has_moved = true;
@@ -103,8 +103,7 @@ if(!place_meeting( x + xSpeed, y, colliderParent)){
 		x += sign(xSpeed);
 	}
 	xSpeed = 0;
-}
-*/
+}*/
 #endregion
 
 #region // Collision checks
