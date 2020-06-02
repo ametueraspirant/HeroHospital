@@ -19,8 +19,7 @@ global.l_main_layer = "Instances";
 instance_create_layer(0, 0, global.l_main_layer, obj_game_camera);
 
 #region // player enum states
-enum p_on_where
-{
+enum p_on_where {
 	on_ground,
 	on_air,
 	on_wall,
@@ -28,8 +27,7 @@ enum p_on_where
 	on_swim
 }
 
-enum p_is_ground
-{
+enum p_is_ground {
 	is_idle,
 	is_walk,
 	is_run,
@@ -44,15 +42,13 @@ enum p_is_ground
 	is_not
 }
 
-enum p_is_air
-{
+enum p_is_air {
 	is_rise,
 	is_fall,
 	is_not
 }
 
-enum p_is_wall
-{
+enum p_is_wall {
 	is_run,
 	is_slide,
 	is_climb,
@@ -60,15 +56,13 @@ enum p_is_wall
 	is_not
 }
 
-enum p_is_ledge
-{
+enum p_is_ledge {
 	is_hang,
 	is_climb,
 	is_not
 }
 
-enum p_is_swim
-{
+enum p_is_swim {
 	is_not
 }
 #endregion
@@ -78,8 +72,7 @@ enum p_is_swim
 #endregion
 
 #region //misc enum states
-enum g_camera_state
-{
+enum g_camera_state {
 	c_player,
 	c_action,
 	c_cutscene
