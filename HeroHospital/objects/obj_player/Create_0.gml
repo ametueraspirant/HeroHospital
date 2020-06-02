@@ -1,4 +1,4 @@
-/// @description Initialize player
+/// @description Initialize the player
 
 // convert global variables to local variables
 g2l_jump = global.g_key_up;

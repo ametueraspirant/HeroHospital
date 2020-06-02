@@ -1,4 +1,4 @@
-/// @description Move player
+/// @description Move the player
 
 #region // Input checks
 key_jump = keyboard_check(g2l_jump);
