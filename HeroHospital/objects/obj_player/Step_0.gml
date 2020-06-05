@@ -50,7 +50,7 @@ if(t_punch > 0)t_punch--;
 if(t_kick > 0)t_kick--;
 if(t_block > 0)t_block--;
 if(t_dash > 0)t_dash--;
-
+	
 /* remedial ledge id code. old variables that will be changed
 inst = instance_place(x + runDir, y, ledgeCollider);
 if(inst == noone)inst = instance_place(x + runDir, y + 1, ledgeCollider);
