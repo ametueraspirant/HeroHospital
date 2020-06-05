@@ -42,14 +42,14 @@ if(key_block_tap and t_block < t_set)t_block = t_set;
 if(key_dash_tap and t_dash < t_set)t_dash = t_set;
 
 // decrement the buffers by one per frame
-if(t_jump >= 0)t_jump--;
-if(t_duck >= 0)t_duck--;
-if(t_left >= 0)t_left--;
-if(t_right >= 0)t_right--;
-if(t_punch >= 0)t_punch--;
-if(t_kick >= 0)t_kick--;
-if(t_block >= 0)t_block--;
-if(t_dash >= 0)t_dash--;
+if(t_jump > 0)t_jump--;
+if(t_duck > 0)t_duck--;
+if(t_left > 0)t_left--;
+if(t_right > 0)t_right--;
+if(t_punch > 0)t_punch--;
+if(t_kick > 0)t_kick--;
+if(t_block > 0)t_block--;
+if(t_dash > 0)t_dash--;
 
 /* remedial ledge id code. old variables that will be changed
 inst = instance_place(x + runDir, y, ledgeCollider);
@@ -65,6 +65,7 @@ if(key_menu)menu = !menu;
 #endregion
 
 #region // Movement checks
+
 
 /* this here movement code will need to be changed to fit the slopes.
 //horizontal movement and collision

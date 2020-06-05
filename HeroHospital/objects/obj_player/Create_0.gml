@@ -78,3 +78,5 @@ menu = false;
 debug = false;
 run_dir = 1;
 look_dir = 1;
+y_offset = 0;
+angle = 0;
