@@ -43,11 +43,11 @@ accel_ground = 1;
 accel_air = .5;
 accel_crouch = 0.8;
 
-// define current weight variables
-weight = 0;
-weight_default = .5;
-weight_fall = .8;
-weight_wall = .4;
+// define current gravity variables
+grav = 0;
+grav_default = .5;
+grav_fall = .8;
+grav_wall = .4;
 
 // define current timers
 t_fall = 0;

@@ -67,6 +67,20 @@ if(key_menu)menu = !menu;
 #region // Movement checks
 
 
+/* try this out for adding speed fractions...
+#region Speed Fractions
+//Add fractions back
+x_speed_ +=        x_fraction_;
+y_speed_ +=        y_fraction_;
+
+//Store and remove fractions for the next frame, so we're always in an integer position
+//Int64s don't store fractions, so we're essentially flooring our numbers to remove the fraction, this also caps the value of our speed to 4.something quintrillion.
+x_fraction_ =    frac(x_speed_);
+x_speed_ =        int64(x_speed_);
+y_fraction_ =    frac(y_speed_);
+y_speed_ =        int64(y_speed_);
+#endregion
+*/
 /* this here movement code will need to be changed to fit the slopes.
 //horizontal movement and collision
 if(keyRight and !place_meeting(x + 1, y, colliderParent)){
