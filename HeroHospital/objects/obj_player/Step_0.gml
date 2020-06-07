@@ -81,6 +81,7 @@ y_fraction_ =    frac(y_speed_);
 y_speed_ =        int64(y_speed_);
 #endregion
 */
+
 /* this here movement code will need to be changed to fit the slopes.
 //horizontal movement and collision
 if(keyRight and !place_meeting(x + 1, y, colliderParent)){
