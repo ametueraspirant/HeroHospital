@@ -50,13 +50,6 @@ if(t_punch > 0)t_punch--;
 if(t_kick > 0)t_kick--;
 if(t_block > 0)t_block--;
 if(t_dash > 0)t_dash--;
-	
-/* remedial ledge id code. old variables that will be changed
-inst = instance_place(x + runDir, y, ledgeCollider);
-if(inst == noone)inst = instance_place(x + runDir, y + 1, ledgeCollider);
-if(place_meeting(x + runDir, y + 1, ledgeCollider) and inst != noone){
-	ledgeTouch = inst;
-}*/
 
 // even more miscellaneous-er checks
 if(keyboard_check(vk_anykey))has_moved = true;
@@ -65,61 +58,11 @@ if(key_menu)menu = !menu;
 #endregion
 
 #region // Movement checks
+//split speeds into incremental numbers and save the fractions
+var_save = increment_fractions(speed_x, speed_y, speed_x_fraction, speed_y_fraction);
+speed_x = var_save[0]; speed_y = var_save[1]; speed_x_fraction = var_save[2]; speed_y_fraction = var_save[3];
 
 
-/* try this out for adding speed fractions...
-#region Speed Fractions
-//Add fractions back
-x_speed_ +=        x_fraction_;
-y_speed_ +=        y_fraction_;
-
-//Store and remove fractions for the next frame, so we're always in an integer position
-//Int64s don't store fractions, so we're essentially flooring our numbers to remove the fraction, this also caps the value of our speed to 4.something quintrillion.
-x_fraction_ =    frac(x_speed_);
-x_speed_ =        int64(x_speed_);
-y_fraction_ =    frac(y_speed_);
-y_speed_ =        int64(y_speed_);
-#endregion
-*/
-
-/* this here movement code will need to be changed to fit the slopes.
-//horizontal movement and collision
-if(keyRight and !place_meeting(x + 1, y, colliderParent)){
-	if(xSpeed <= maxRunSpeed){
-		xSpeed += accel;
-	}
-}
-if(keyLeft and !place_meeting(x - 1, y, colliderParent)){
-	if(xSpeed >= -maxRunSpeed){
-		xSpeed -= accel;
-	}
-}
-if(xSpeed != 0){
-	if(abs(xSpeed) < 0.7 and ((!keyLeft and !keyRight) or (keyLeft and keyRight) or keyDuck)){
-		xSpeed = 0;
-	}
-	xSpeed -= sign(xSpeed) * frict;
-}	
-//falling and vertical collision
-if(!place_meeting(x, y + ySpeed, colliderParent)){
-	y += ySpeed;
-	if(ySpeed <= maxFallSpeed){
-		ySpeed += weight;
-	}
-} else {
-	while(!place_meeting(x, y + sign(ySpeed), colliderParent)){
-	y += sign(ySpeed);
-	}
-	ySpeed = 0
-}
-if(!place_meeting( x + xSpeed, y, colliderParent)){
-	x += xSpeed;
-} else {
-	while(!place_meeting(x + sign(xSpeed), y, colliderParent)){
-		x += sign(xSpeed);
-	}
-	xSpeed = 0;
-}*/
 #endregion
 
 #region // Collision checks

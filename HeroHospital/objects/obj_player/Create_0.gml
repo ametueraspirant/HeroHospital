@@ -30,6 +30,8 @@ speed_x = 0;
 speed_y = 0;
 speed_x_saved = 0;
 speed_y_saved = 0;
+speed_x_fraction = 0;
+speed_y_fraction = 0;
 
 // define current friction variables
 frict = 0;
